@@ -29,6 +29,7 @@ Penncoursefinder::Application.routes.draw do
   resources :sections
   resources :recitations
   resources :meetings
+  resources :queries
   
   ####
   root :to => "pages#home"
