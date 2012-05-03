@@ -1,0 +1,49 @@
+
+<center><table class="profile" summary="Course information" style="border:2px solid black;-moz-border-radius:8px;border-radius:8px;margin-top: 30px;margin-bottom:50px;">
+  <tr>
+    <td class="main">
+      <h1>
+        <%= @course.department %> <%= @course.number_to_s %>
+      </h1>
+    
+      <strong>Department:</strong> <%= @course.department %><br />
+      <strong>Course Number:</strong> <%= @course.number_to_s %><br />
+      <strong>Course Name:</strong> <%= @course.name %><br />
+      <strong>Course Units:</strong> <%= @course.cus %><br />
+      <strong>Course Rating:</strong> <%= @course.course_rating_to_s %><br />
+      <strong>Difficulty Rating:</strong> <%= @course.difficulty_rating_to_s %><br />
+    </td>
+    <td>
+        <strong><u>Sections</strong></u><br><br>
+      <% @course.sections.each do |section| %>
+        <strong>Section:</strong> <%= section.listing_to_s %> <br> <strong>Instructor:</strong> <%= section.instructor %><br> <strong>Instructor Rating:</strong> <%= section.instructor_rating %><br />
+            <% section.meetings.each do |meeting| %>
+            <li><%= meeting.start_time_to_s %> to <%= meeting.end_time_to_s %>
+            on <%= meeting.day_to_s %> </li>
+          <% end %>
+        <br>
+      <% end %>
+    </td>
+      <td>
+        <strong><u>Recitations</strong></u><br><br>
+      <% @course.recitations.each do |recitation| %>
+        <strong>Recitation:</strong> <%= recitation.listing_to_s %>
+          <% recitation.meetings.each do |meeting| %>
+            <li><%= meeting.start_time_to_s %> to <%= meeting.end_time_to_s %>
+            on <%= meeting.day_to_s %> </li>
+          <% end %>
+        <br>
+      <% end %>
+    </td>
+        <td>
+        <strong><u>Requirements Fulfilled</strong></u><br><br>
+          <% @course.requirements.each do |requirement| %>
+            <%= requirement.name %>
+          <% end %>
+        <br />
+        <br>
+    </td>
+  </tr>
+</table>
+</div>
+</center>

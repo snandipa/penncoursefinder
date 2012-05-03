@@ -1,0 +1,13 @@
+<h1>All courses</h1>
+
+<%= will_paginate %>
+
+<ul class="courses">
+  <% @courses.each do |course| %>
+    <li>
+    <%= link_to "#{course.department} #{course.number_to_s} - #{course.name}", course %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

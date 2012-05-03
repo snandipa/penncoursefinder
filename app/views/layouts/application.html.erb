@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Penncoursefinder</title>
+  <title>Penn Course Finder</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag :defaults %>
+  
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="orbit-wrapper">
+  <div class="container">
+      <%= render 'layouts/header' %>
+      <section class="round">
+        <% flash.each do |key, value| %>
+          <div class="flash_<%= key %>"><%= value %></div>
+        <% end %>
+        <%= yield %>
+      </section>
+      <%= render 'layouts/footer' %>
+      <br><br>
+  </div>
+</div>
 </body>
 </html>

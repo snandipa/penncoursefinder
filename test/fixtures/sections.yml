@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  listing: 1
+  course_id: 1
+  instructor_rating: 9.99
+  instructor: MyString
+
+two:
+  listing: 1
+  course_id: 1
+  instructor_rating: 9.99
+  instructor: MyString
