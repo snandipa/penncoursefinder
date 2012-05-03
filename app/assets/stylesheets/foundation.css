@@ -42,6 +42,7 @@
 		border: 0;
 		font: inherit;
 		vertical-align: baseline;
+
 	}
 	html {
 		font-size: 62.5%; 
@@ -77,6 +78,7 @@
 	
 	body {
 		text-align:center;
+		background-image:url('bg.gif');
 		font-family: "Myriad Pro"; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
 /*	--------------------------------------------------
 	:: Our Code
