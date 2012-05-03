@@ -79,6 +79,7 @@
 	body {
 		text-align:center;
 		background-image:url('bg.gif');
+		background-repeat:repeat-x;
 		font-family: "Myriad Pro"; font-size: 13px; line-height: 18px; color: #555; position: relative; -webkit-font-smoothing: antialiased; }
 /*	--------------------------------------------------
 	:: Our Code
