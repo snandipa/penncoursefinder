@@ -166,9 +166,10 @@
 	{
 		position:absolute;
 		top:8px;
+		margin-left:auto;
 		left:374px;
 		overflow:hidden;
-		width:455px;
+		width:757px;
 	}
 	
 	div.headerboxsignout

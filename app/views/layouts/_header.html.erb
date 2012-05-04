@@ -1,4 +1,4 @@
-<header><br><br>
+<br><br>
 
 <font face="palatino", font size="4">
 
@@ -7,7 +7,6 @@
   <%= link_to image_tag("PSA_LOGO_final.png",{:alt => "Penn Course Finder"}), root_path %>
 </div>
 </div>
-
 
   <div class="headerboxsignin">
     <ul class="nav-bar">
@@ -18,7 +17,13 @@
 		<%= link_to "All Courses", courses_path %>
         </li>
         <li>
-		<%= link_to "Queries", queries_path %>
+		<%= link_to "Requirements", queries_path %>
+        </li>
+	<li>
+		<%= link_to "Course Levels", querynumbers_path %>
+        </li>
+	<li>
+		<%= link_to "Start Times", root_path %>
         </li>
   </div>
 
@@ -26,4 +31,4 @@
   
 </font>
 
-<br><br><br></header>
+<br><br><br>

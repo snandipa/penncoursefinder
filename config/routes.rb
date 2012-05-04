@@ -1,4 +1,14 @@
 Penncoursefinder::Application.routes.draw do
+  #get "querynumbers/new"
+
+  #get "querynumbers/create"
+
+  #get "querynumbers/destroy"
+
+  #get "querynumbers/show"
+
+  #get "querynumbers/index"
+
   get "queries/create"
 
   get "queries/destroy"
@@ -34,6 +44,7 @@ Penncoursefinder::Application.routes.draw do
   resources :recitations
   resources :meetings
   resources :queries
+  resources :querynumbers
   
   ####
   root :to => "pages#home"

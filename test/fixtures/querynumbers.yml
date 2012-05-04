@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  course_number_lower_bound: 1
+  course_number_upper_bound: 1
+  department: MyString
+
+two:
+  course_number_lower_bound: 1
+  course_number_upper_bound: 1
+  department: MyString

@@ -8,6 +8,9 @@ class Course < ActiveRecord::Base
 
   #Each Course could satisfy a particular requirement (such as Humanities) and each requirement has many associated courses with it
   has_and_belongs_to_many :requirements
+  
+  has_and_belongs_to_many :queries
+  has_and_belongs_to_many :querynumbers
 
   #When creating a course, the department, number, unique identifier, name, course units, course rating and difficulty rating fields must all have data
   validates_presence_of :department, :number, :cusip, :name, :cus, :course_rating, :difficulty_rating
