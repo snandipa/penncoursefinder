@@ -1,0 +1,10 @@
+<% if @query.errors.any? %>
+  <div id="error_explanation">
+      Please look at the <%= pluralize(@query.errors.count, "error") %>.
+
+    <% @query.errors.full_messages.each do |msg| %>
+      <br><%= msg %>
+    <% end %>
+
+  </div>
+<% end %>

@@ -1,0 +1,21 @@
+<div class="coursebox2">
+<h1>All Queries</h1>
+
+<%= will_paginate %>
+
+<ul class="courses">
+  <% @queries.each do |query| %>
+    <li>
+    <%= link_to "#{query.created_at.strftime("Created on %m/%d/%Y at %r")}", query %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+  
+</div>
+<br><br><br>
+
+
+
+

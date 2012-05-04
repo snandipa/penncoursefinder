@@ -1,4 +1,12 @@
 Penncoursefinder::Application.routes.draw do
+  get "queries/create"
+
+  get "queries/destroy"
+
+  get "queries/show"
+
+  get "queries/index"
+
   get "section/create"
 
   get "section/destroy"
@@ -20,10 +28,6 @@ Penncoursefinder::Application.routes.draw do
   get "courses/destroy"
 
   get "pages/home"
-
-  get "pages/queryresult"
-
-  get "pages/queryall"
   
   resources :courses
   resources :sections
@@ -33,9 +37,6 @@ Penncoursefinder::Application.routes.draw do
   
   ####
   root :to => "pages#home"
-  
-  match '/queryresult', :to => 'pages#queryresult'
-  match '/queryall',   :to => 'pages#queryall'
 
 
   # The priority is based upon order of creation:

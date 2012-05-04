@@ -1,0 +1,25 @@
+<div class="coursebox2">
+<h4>Results of Your Query Below!</h4>
+
+  <div class="metricbox"><strong><h5><u>Metrics</h5></u></strong>
+    <div style="text-align:left;">
+      <strong>Course Rating Lower Bound:</strong> <%= @query.course_rating_lower_bound_to_s %><br>
+      <strong>Difficulty Rating Upper Bound:</strong> <%= @query.difficulty_rating_upper_bound_to_s %><br>
+      <strong>Requirement Category:</strong> <%= @query.requirement_category %><br>
+    </div>
+  </div><br>
+
+<%= will_paginate %>
+
+<ul class="courses">
+  <% @queries.each do |course| %>
+    <li>
+    <%= link_to "#{course.department} #{course.number_to_s} - #{course.name}", course %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+  
+</div>
+<br><br><br>

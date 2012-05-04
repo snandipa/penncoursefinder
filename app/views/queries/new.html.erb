@@ -1,0 +1,28 @@
+<div class="coursebox2">
+<h4>Filter requirements based on course rating</h4>
+
+  
+
+  <%= form_for @query do |f| %>
+      <p><%= render 'shared/error_messages_query', :object => f.object %></p>
+    
+    <h6>Requirement Category (select one):</h6>
+    <ul id="list">
+      <li><%= f.radio_button :requirement_category, 'SS' %> Social Science</li>
+      <li><%= f.radio_button :requirement_category, 'H' %> Humanities</li>
+      <li><%= f.radio_button :requirement_category, 'TBS' %> Technology in Business and Society</li>
+      <li><%= f.radio_button :requirement_category, 'NS' %> Natural Science</li>
+      <li><%= f.radio_button :requirement_category, 'M' %> Math</li>
+      <li><%= f.radio_button :requirement_category, 'E' %> Engineering</li>
+    </ul>
+
+    <h6>I want my course to be rated <strong>higher</strong> than:</h6>
+    <%= f.text_field :course_rating_lower_bound %><br />
+    <br>
+    <h6>I want my difficulty to be rated <strong>lower</strong> than:</h6>
+    <%= f.text_field :difficulty_rating_upper_bound %><br />
+  
+    <%= f.submit "Find your courses!", class: 'small nice blue radius button'%>
+  <% end %>
+</div>
+<br><br><br>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120503211201) do
+ActiveRecord::Schema.define(:version => 20120504132656) do
 
   create_table "courses", :force => true do |t|
     t.string   "department"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(:version => 20120503211201) do
     t.decimal  "cus"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+  end
+
+  create_table "courses_queries", :id => false, :force => true do |t|
+    t.integer "course_id"
+    t.integer "query_id"
   end
 
   create_table "courses_requirements", :id => false, :force => true do |t|
@@ -41,11 +46,11 @@ ActiveRecord::Schema.define(:version => 20120503211201) do
   end
 
   create_table "queries", :force => true do |t|
-    t.decimal  "course_rating_lb"
-    t.decimal  "difficulty_rating_ub"
     t.string   "requirement_category"
-    t.datetime "created_at",           :null => false
-    t.datetime "updated_at",           :null => false
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.decimal  "course_rating_lower_bound"
+    t.decimal  "difficulty_rating_upper_bound"
   end
 
   create_table "recitations", :force => true do |t|
