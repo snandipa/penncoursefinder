@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  course_rating_lb: 9.99
-  difficulty_rating_ub: 9.99
+  course_rating_lower_bound: 9.99
+  difficulty_rating_upper_bound: 9.99
   requirement_category: MyString
 
 two:
-  course_rating_lb: 9.99
-  difficulty_rating_ub: 9.99
+  course_rating_lower_bound: 9.99
+  difficulty_rating_upper_bound: 9.99
   requirement_category: MyString

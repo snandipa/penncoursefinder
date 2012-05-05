@@ -91,6 +91,19 @@
 	:: Our Code
 	-------------------------------------------------- */
 	
+	.label_text
+	{
+		font-family: "Myriad Pro";
+		color: #181818;
+		font-size:18px;
+		font-weight: normal;
+		line-height:2.5em;
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+	}
+	
 	div.mcbox
 	{
 		height:200px;

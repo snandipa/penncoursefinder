@@ -4,11 +4,13 @@
   <%= form_for @querytiming do |f| %>
       <p><%= render 'shared/error_messages_querytiming', :object => f.object %></p>
     
-    <h6>I want my class's section to <strong>start</strong> at:</h6>
+    <%= f.label :desired_start_time, "I want my class's section to start at:", class:'label_text' %>
     <%= f.select :desired_start_time, options_from_collection_for_select(@start_meetings, 'start_time','start_time_to_s') %>
-    <br><h6>I want my class's section to <strong>end</strong> at:</h6>
+    
+    <%= f.label :desired_end_time, "I want my class's section to end at:", class:'label_text' %>
     <%= f.select :desired_end_time, options_from_collection_for_select(@end_meetings, 'end_time','end_time_to_s') %>
-    <br><h6>I want my class's section be <strong>on</strong>:</h6>
+    
+    <%= f.label :desired_day, "I want my class's section be on:", class:'label_text' %>
     <%= f.select :desired_day, options_from_collection_for_select(@day_meetings, 'day','day_to_s') %>
 
   

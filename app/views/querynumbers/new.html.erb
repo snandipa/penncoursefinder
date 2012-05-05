@@ -4,14 +4,15 @@
   <%= form_for @querynumber do |f| %>
       <p><%= render 'shared/error_messages_querynumber', :object => f.object %></p>
 
-    <h6>I want my course to have this department:</h6>
+    <%= f.label :department, "I want my course to have this department:", class:'label_text' %>
     <%= f.text_field :department %><br />
     <br>
 
-    <h6>I want my course to be <strong>above</strong>:</h6>
+    <%= f.label :course_number_lower_bound, "I want my course to be above:", class:'label_text' %>
     <%= f.text_field :course_number_lower_bound %><br />
     <br>
-    <h6>I want my course to be <strong>below</strong>:</h6>
+    
+    <%= f.label :course_number_upper_bound, "I want my course to be below:", class:'label_text' %>
     <%= f.text_field :course_number_upper_bound %><br />
   
     <center><%= f.submit "Find your courses!", class: 'small nice blue radius button'%></center>
