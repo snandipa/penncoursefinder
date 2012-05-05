@@ -1,57 +1,9 @@
 Penncoursefinder::Application.routes.draw do
-  get "querytimings/index"
-
-  get "querytimings/new"
-
-  get "querytimings/show"
-
-  #get "querynumbers/new"
-
-  #get "querynumbers/create"
-
-  #get "querynumbers/destroy"
-
-  #get "querynumbers/show"
-
-  #get "querynumbers/index"
-
-  get "queries/create"
-
-  get "queries/destroy"
-
-  get "queries/show"
-
-  get "queries/index"
-
-  get "section/create"
-
-  get "section/destroy"
-
-  get "requirement/create"
-
-  get "requirement/destroy"
-
-  get "recitation/create"
-
-  get "recitation/destroy"
-
-  get "meeting/create"
-
-  get "meeting/destroy"
-
-  get "courses/create"
-
-  get "courses/destroy"
-
-  get "pages/home"
   
-  resources :courses
-  resources :sections
-  resources :recitations
-  resources :meetings
-  resources :queries
-  resources :querynumbers
-  resources :querytimings
+  resources :courses, :only => [:index, :show]
+  resources :queries, :only => [:index, :new, :show, :create]
+  resources :querynumbers, :only => [:index, :new, :show, :create]
+  resources :querytimings, :only => [:index, :new, :show, :create]
   
   ####
   root :to => "pages#home"
