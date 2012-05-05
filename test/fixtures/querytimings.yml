@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  desired_start_time: 9.99
+  desired_end_time: 9.99
+  desired_day: 1
+
+two:
+  desired_start_time: 9.99
+  desired_end_time: 9.99
+  desired_day: 1

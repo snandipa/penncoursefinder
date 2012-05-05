@@ -1,0 +1,18 @@
+<div class="coursebox2">
+<h4>Find a section that occurs on a particular time & day:</h4>
+
+  <%= form_for @querytiming do |f| %>
+      <p><%= render 'shared/error_messages_querytiming', :object => f.object %></p>
+    
+    <h6>I want my class's section to <strong>start</strong> at:</h6>
+    <%= f.select :desired_start_time, options_from_collection_for_select(@start_meetings, 'start_time','start_time_to_s') %>
+    <br><h6>I want my class's section to <strong>end</strong> at:</h6>
+    <%= f.select :desired_end_time, options_from_collection_for_select(@end_meetings, 'end_time','end_time_to_s') %>
+    <br><h6>I want my class's section be <strong>on</strong>:</h6>
+    <%= f.select :desired_day, options_from_collection_for_select(@day_meetings, 'day','day_to_s') %>
+
+  
+    <center><%= f.submit "Find your sections!", class: 'small nice blue radius button'%></center>
+  <% end %>
+</div>
+<br><br><br>

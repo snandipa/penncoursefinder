@@ -1,0 +1,25 @@
+<div class="coursebox2">
+<h4>Results of Your Query Below!</h4>
+
+  <div class="metricbox"><strong><h5><u>Metrics</h5></u></strong>
+    <div style="text-align:left;">
+      <strong>Desired Start Time:</strong> <%= @querytiming.desired_start_time_to_s %><br>
+      <strong>Desired End Time:</strong> <%= @querytiming.desired_end_time_to_s %><br>
+      <strong>Desired Day:</strong> <%= @querytiming.desired_day_to_s %><br>
+    </div>
+  </div><br>
+
+<%= will_paginate %>
+
+<ul class="courses">
+  <% @querytimings.each do |section| %>
+    <li>
+    <%= link_to "Section #{section.listing_to_s} from #{section.course.department} #{section.course.number_to_s} - #{section.course.name}", section.course %>
+    </li>
+  <% end %>
+</ul>
+
+<%= will_paginate %>
+  
+</div>
+<br><br><br>

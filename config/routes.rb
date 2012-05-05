@@ -1,4 +1,10 @@
 Penncoursefinder::Application.routes.draw do
+  get "querytimings/index"
+
+  get "querytimings/new"
+
+  get "querytimings/show"
+
   #get "querynumbers/new"
 
   #get "querynumbers/create"
@@ -45,6 +51,7 @@ Penncoursefinder::Application.routes.draw do
   resources :meetings
   resources :queries
   resources :querynumbers
+  resources :querytimings
   
   ####
   root :to => "pages#home"

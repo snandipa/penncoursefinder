@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120504203655) do
+ActiveRecord::Schema.define(:version => 20120505144142) do
 
   create_table "courses", :force => true do |t|
     t.string   "department"
@@ -64,6 +64,19 @@ ActiveRecord::Schema.define(:version => 20120504203655) do
     t.string   "department"
     t.datetime "created_at",                :null => false
     t.datetime "updated_at",                :null => false
+  end
+
+  create_table "querytimings", :force => true do |t|
+    t.decimal  "desired_start_time"
+    t.decimal  "desired_end_time"
+    t.integer  "desired_day"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
+
+  create_table "querytimings_sections", :id => false, :force => true do |t|
+    t.integer "querytiming_id"
+    t.integer "section_id"
   end
 
   create_table "recitations", :force => true do |t|

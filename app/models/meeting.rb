@@ -6,6 +6,10 @@ class Meeting < ActiveRecord::Base
 
   validates_presence_of :start_time, :end_time, :day
 
+  def meets_desired_time_and_day(desired_start_time, desired_end_time, desired_day)
+      return true if self.start_time == desired_start_time && self.end_time == desired_end_time && self.day == desired_day
+      return false
+  end
   
   def day_to_s
     case

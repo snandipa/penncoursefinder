@@ -19,5 +19,16 @@ class Section < ActiveRecord::Base
   def to_s
     return "| Section (ID: #{self.id}) (Listing: #{self.listing})|"
   end
+  
+  def section
+    self
+  end
+  
+  def has_meeting_at(desired_start_time, desired_end_time, desired_day)
+    self.meetings.each do |the_meeting|
+      return true if the_meeting.meets_desired_time_and_day(desired_start_time, desired_end_time, desired_day)
+    end
+    return false
+  end
 
 end
