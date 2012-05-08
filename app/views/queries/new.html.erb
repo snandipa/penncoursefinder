@@ -7,12 +7,12 @@
     
     <%= f.label :requirement_category, "Requirement Category (select one):", class:'label_text' %>
     <ul id="list">
-      <li><%= f.radio_button :requirement_category, 'SS' %> Social Science</li>
-      <li><%= f.radio_button :requirement_category, 'H' %> Humanities</li>
-      <li><%= f.radio_button :requirement_category, 'TBS' %> Technology in Business and Society</li>
-      <li><%= f.radio_button :requirement_category, 'NS' %> Natural Science</li>
-      <li><%= f.radio_button :requirement_category, 'M' %> Math</li>
-      <li><%= f.radio_button :requirement_category, 'E' %> Engineering</li>
+      <li><%= f.radio_button :requirement_category, 'SS', id:"Social Science" %> Social Science</li>
+      <li><%= f.radio_button :requirement_category, 'H', id:"Humanities" %> Humanities</li>
+      <li><%= f.radio_button :requirement_category, 'TBS', id:"Technology in Business and Society" %> Technology in Business and Society</li>
+      <li><%= f.radio_button :requirement_category, 'NS', id:"Natural Science" %> Natural Science</li>
+      <li><%= f.radio_button :requirement_category, 'M', id:"Math" %> Math</li>
+      <li><%= f.radio_button :requirement_category, 'E', id:"Engineering" %> Engineering</li>
     </ul>
 
     

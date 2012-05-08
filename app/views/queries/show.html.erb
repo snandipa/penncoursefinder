@@ -14,7 +14,7 @@
 <ul class="courses">
   <% @queries.each do |course| %>
     <li>
-    <%= link_to "#{course.department} #{course.number_to_s} - #{course.name}", course %>
+    <%= link_to "#{course.department} #{course.number_to_s} - #{course.name}", course%>
     </li>
   <% end %>
 </ul>

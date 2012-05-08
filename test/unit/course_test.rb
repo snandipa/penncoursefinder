@@ -10,7 +10,6 @@ class CourseTest < ActiveSupport::TestCase
    
     test "should always contain a department" do
      the_course = Course.create(number:95, cusip:10320, name:"Test CIS Class", cus:1, course_rating:2.5, difficulty_rating:2.5)
-
      assert !the_course.save, "Allowed you to save a course without a department"
     end
     
@@ -22,5 +21,7 @@ class CourseTest < ActiveSupport::TestCase
     test "should always contain a name" do
      the_course = Course.create(department:"CIS", number:95, cusip:10320, cus:1, course_rating:2.5, difficulty_rating:2.5)
      assert !the_course.save, "Allowed you to save a course without a number"
-   end
+    end
+    
+
 end
